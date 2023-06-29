@@ -8,12 +8,12 @@
 		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 
 		<!-- Icons -->
 		<link
 			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
 		/>
 
 		<!-- Custom styles -->
@@ -23,11 +23,10 @@
 		<main class="main">
 			<div class="modal">
 				<ul>
-					<li>
-						<div>
-							<label for="">Dark mode</label>
-							<button id="dark-mode-switch" class="switch"></button>
-							<!-- <button class="switch triggered"></button> -->
+					<li class="modal__item">
+						<label for="">Dark mode</label>
+						<div id="dark-mode-switch" class="switch">
+							<button class="switch__button"></button>
 						</div>
 					</li>
 				</ul>
@@ -39,8 +38,8 @@
 				</button>
 			</header>
 
-			<div class="time-container">
-				<span class="time">00:00</span>
+			<div class="time">
+				<span class="time__text">00:00</span>
 			</div>
 
 			<button class="button start-counter-button">
