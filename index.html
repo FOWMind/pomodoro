@@ -21,19 +21,20 @@
 	</head>
 	<body class="dark">
 		<main class="main">
-			<div class="modal">
+			<div id="settings-modal" class="modal">
 				<ul>
 					<li class="modal__item">
-						<label for="">Dark mode</label>
+						<span>Dark mode</span>
 						<div id="dark-mode-switch" class="switch">
 							<button class="switch__button"></button>
 						</div>
 					</li>
 				</ul>
 			</div>
+
 			<header class="header">
 				<h1 class="headline">Pomodoro</h1>
-				<button class="icon-button">
+				<button id="open-settings" class="icon-button">
 					<span class="icon material-symbols-outlined">settings</span>
 				</button>
 			</header>
@@ -48,6 +49,6 @@
 			</button>
 		</main>
 
-		<script src="js/index.js"></script>
+		<script src="js/index.js" type="module"></script>
 	</body>
 </html>

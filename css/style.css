@@ -41,6 +41,7 @@ html {
 
 	--font: 'Roboto', sans-serif;
 	--google-icon-font: 'Material Symbols Outlined';
+	--modal-animation-duration: 500ms;
 }
 
 html.dark {
@@ -49,7 +50,7 @@ html.dark {
 	--secondary-transparent: hsla(0, 0%, 0%, 0.25);
 	--tertiary: hsl(199, 100%, 66%);
 
-	--modal-bg: var(--primary-900);
+	--modal-bg: var(--primary);
 	--icon-button-bg: var(--primary-100);
 }
 /* Custom properties end */
@@ -234,16 +235,80 @@ ul {
 
 .modal {
 	position: fixed;
-	top: 50%;
+	top: 0;
 	left: 50%;
-	transform: translate(-50%, -50%);
-	width: auto;
-	min-width: 300px;
+	transform: translate(-50%, -100%);
+
+	width: 90%;
+	min-width: 200px;
+	max-width: 300px;
+	max-height: 100%;
+
+	overflow: auto;
 	padding: 1rem;
+	box-sizing: border-box;
+
+	border-radius: 0 0 10px 10px;
 	background-color: var(--modal-bg);
-	border-radius: 10px;
 	color: var(--secondary);
 	font-weight: 500;
+	transition: transform 0.3s;
+}
+
+.modal.visible {
+	transform: translateX(-50%);
+}
+
+@media screen and (min-width: 900px) {
+	.modal {
+		width: auto;
+		top: 50%;
+		left: 1rem;
+		transform: translate3d(-110%, -50%, 0);
+		border-radius: 10px;
+	}
+
+	.modal.visible {
+		transform: translateY(-50%);
+	}
+
+	@supports (animation: test) {
+		.modal.hidden {
+			animation: bounce-and-move-to-left var(--modal-animation-duration) forwards;
+		}
+
+		.modal.visible {
+			animation: move-to-right-and-bounce var(--modal-animation-duration) forwards;
+		}
+
+		@keyframes move-to-right-and-bounce {
+			0% {
+				transform: translate3d(-110%, -50%, 0);
+			}
+
+			50% {
+				transform: translate3d(25px, -50%, 0);
+			}
+
+			100% {
+				transform: translate3d(0, -50%, 0);
+			}
+		}
+
+		@keyframes bounce-and-move-to-left {
+			0% {
+				transform: translate3d(0, -50%, 0);
+			}
+
+			50% {
+				transform: translate3d(25px, -50%, 0);
+			}
+
+			100% {
+				transform: translate3d(-110%, -50%, 0);
+			}
+		}
+	}
 }
 
 .modal__item {
