@@ -1,54 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Pomodoro</title>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <title>Pomodoro</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- Fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 
-		<!-- Icons -->
-		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
-		/>
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
 
-		<!-- Custom styles -->
-		<link href="css/style.css" rel="stylesheet" />
-	</head>
-	<body class="dark">
-		<main class="main">
-			<div id="settings-modal" class="modal">
-				<ul>
-					<li class="modal__item">
-						<span>Dark mode</span>
-						<div id="dark-mode-switch" class="switch">
-							<button class="switch__button"></button>
-						</div>
-					</li>
-				</ul>
-			</div>
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body class="dark">
+    <main class="main">
+      <div id="settings-modal" class="modal">
+        <ul>
+          <li class="modal__item-container">
+            <h3 class="headline headline--small modal__headline">Theme</h3>
+            <div class="modal__item">
+              <span class="modal__item__text">Dark mode</span>
+              <div id="dark-mode-switch" class="switch">
+                <button class="switch__button"></button>
+              </div>
+            </div>
+          </li>
 
-			<header class="header">
-				<h1 class="headline">Pomodoro</h1>
-				<button id="open-settings" class="icon-button">
-					<span class="icon material-symbols-outlined">settings</span>
-				</button>
-			</header>
+          <li class="modal__item-container">
+            <h3 class="headline headline--small modal__headline">Minutes</h3>
+            <div class="modal__item modal__item--glued">
+              <div>
+                <span class="modal__item__text">Activity</span>
+                <div id="pomodoro-activity" class="time-selector modal__item__selector">
+                  <button data-identifier="more" class="time-selector__button">
+                    <span class="icon material-symbols-outlined">keyboard_arrow_up</span>
+                  </button>
+                  <input data-identifier="time" class="time-selector__field" type="text" value="00" />
+                  <button data-identifier="less" class="time-selector__button">
+                    <span class="icon material-symbols-outlined">keyboard_arrow_down</span>
+                  </button>
+                </div>
+              </div>
 
-			<div class="time">
-				<span class="time__text">00:00</span>
-			</div>
+              <div>
+                <span class="modal__item__text">Break</span>
+                <div id="pomodoro-break" class="time-selector modal__item__selector">
+                  <button data-identifier="more" class="time-selector__button">
+                    <span class="icon material-symbols-outlined">keyboard_arrow_up</span>
+                  </button>
+                  <input data-identifier="time" class="time-selector__field" type="text" value="00" />
+                  <button data-identifier="less" class="time-selector__button">
+                    <span class="icon material-symbols-outlined">keyboard_arrow_down</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-			<button class="button start-counter-button">
-				<span class="icon material-symbols-outlined">timer</span>
-				<span>Start counting</span>
-			</button>
-		</main>
+      <header class="header">
+        <h1 class="headline">Pomodoro</h1>
+        <button id="open-settings" class="icon-button">
+          <span class="icon material-symbols-outlined">settings</span>
+        </button>
+      </header>
 
-		<script src="js/index.js" type="module"></script>
-	</body>
+      <div class="time">
+        <span class="time__text">00:00</span>
+      </div>
+
+      <button class="button start-counter-button">
+        <span class="icon material-symbols-outlined">timer</span>
+        <span>Start counting</span>
+      </button>
+    </main>
+
+    <script src="js/index.js" type="module"></script>
+  </body>
 </html>

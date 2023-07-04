@@ -1,85 +1,85 @@
 /* Custom properties start */
 html {
-	--primary: hsl(0, 0%, 0%);
-	--primary-100: hsl(0, 0%, 10%);
-	--primary-200: hsl(0, 0%, 20%);
-	--primary-300: hsl(0, 0%, 30%);
-	--primary-400: hsl(0, 0%, 40%);
-	--primary-500: hsl(0, 0%, 50%);
-	--primary-600: hsl(0, 0%, 60%);
-	--primary-700: hsl(0, 0%, 70%);
-	--primary-800: hsl(0, 0%, 80%);
-	--primary-900: hsl(0, 0%, 90%);
+  --primary: hsl(0, 0%, 0%);
+  --primary-100: hsl(0, 0%, 10%);
+  --primary-200: hsl(0, 0%, 20%);
+  --primary-300: hsl(0, 0%, 30%);
+  --primary-400: hsl(0, 0%, 40%);
+  --primary-500: hsl(0, 0%, 50%);
+  --primary-600: hsl(0, 0%, 60%);
+  --primary-700: hsl(0, 0%, 70%);
+  --primary-800: hsl(0, 0%, 80%);
+  --primary-900: hsl(0, 0%, 90%);
 
-	--secondary: hsl(0, 0%, 100%);
-	--secondary-100: hsl(0, 0%, 10%);
-	--secondary-200: hsl(0, 0%, 20%);
-	--secondary-300: hsl(0, 0%, 30%);
-	--secondary-400: hsl(0, 0%, 40%);
-	--secondary-500: hsl(0, 0%, 50%);
-	--secondary-600: hsl(0, 0%, 60%);
-	--secondary-700: hsl(0, 0%, 70%);
-	--secondary-800: hsl(0, 0%, 80%);
-	--secondary-900: hsl(0, 0%, 90%);
-	--secondary-transparent: hsla(0, 0%, 100%, 0.25);
+  --secondary: hsl(0, 0%, 100%);
+  --secondary-100: hsl(0, 0%, 10%);
+  --secondary-200: hsl(0, 0%, 20%);
+  --secondary-300: hsl(0, 0%, 30%);
+  --secondary-400: hsl(0, 0%, 40%);
+  --secondary-500: hsl(0, 0%, 50%);
+  --secondary-600: hsl(0, 0%, 60%);
+  --secondary-700: hsl(0, 0%, 70%);
+  --secondary-800: hsl(0, 0%, 80%);
+  --secondary-900: hsl(0, 0%, 90%);
+  --secondary-transparent: hsla(0, 0%, 100%, 0.25);
 
-	--tertiary: hsl(199, 100%, 46%);
-	--tertiary-100: hsl(199, 100%, 10%);
-	--tertiary-200: hsl(199, 100%, 20%);
-	--tertiary-300: hsl(199, 100%, 30%);
-	--tertiary-400: hsl(199, 100%, 40%);
-	--tertiary-500: hsl(199, 100%, 50%);
-	--tertiary-600: hsl(199, 100%, 60%);
-	--tertiary-700: hsl(199, 100%, 70%);
-	--tertiary-800: hsl(199, 100%, 80%);
-	--tertiary-900: hsl(199, 100%, 90%);
+  --tertiary: hsl(199, 100%, 46%);
+  --tertiary-100: hsl(199, 100%, 10%);
+  --tertiary-200: hsl(199, 100%, 20%);
+  --tertiary-300: hsl(199, 100%, 30%);
+  --tertiary-400: hsl(199, 100%, 40%);
+  --tertiary-500: hsl(199, 100%, 50%);
+  --tertiary-600: hsl(199, 100%, 60%);
+  --tertiary-700: hsl(199, 100%, 70%);
+  --tertiary-800: hsl(199, 100%, 80%);
+  --tertiary-900: hsl(199, 100%, 90%);
 
-	--modal-bg: var(--primary-100);
-	--icon-button-bg: var(--primary-900);
-	--day: hsl(53, 100%, 64%);
-	--night: hsl(265, 68%, 51%);
+  --modal-bg: var(--primary-100);
+  --icon-button-bg: var(--primary-900);
+  --day: hsl(53, 100%, 64%);
+  --night: hsl(265, 68%, 51%);
 
-	--font: 'Roboto', sans-serif;
-	--google-icon-font: 'Material Symbols Outlined';
-	--modal-animation-duration: 500ms;
+  --font: 'Roboto', sans-serif;
+  --google-icon-font: 'Material Symbols Outlined';
+  --modal-animation-duration: 500ms;
 }
 
 html.dark {
-	--primary: hsl(0, 0%, 100%);
-	--secondary: hsl(0, 0%, 0%);
-	--secondary-transparent: hsla(0, 0%, 0%, 0.25);
-	--tertiary: hsl(199, 100%, 66%);
+  --primary: hsl(0, 0%, 100%);
+  --secondary: hsl(0, 0%, 0%);
+  --secondary-transparent: hsla(0, 0%, 0%, 0.25);
+  --tertiary: hsl(199, 100%, 66%);
 
-	--modal-bg: var(--primary);
-	--icon-button-bg: var(--primary-100);
+  --modal-bg: var(--primary);
+  --icon-button-bg: var(--primary-100);
 }
 /* Custom properties end */
 
 @media (prefers-reduced-motion: no-preference) {
-	* {
-		transition: background-color 0.3s;
-	}
+  * {
+    transition: background-color 0.3s;
+  }
 }
 
 *::selection {
-	background-color: var(--primary);
-	color: var(--secondary);
+  background-color: var(--primary-500);
+  color: var(--secondary);
 }
 
 html {
-	height: 100%;
-	line-height: 1.18;
+  height: 100%;
+  line-height: 1.18;
 }
 
 body {
-	min-height: 100%;
-	color: var(--primary);
-	background-color: var(--secondary);
-	font-family: var(--font);
+  min-height: 100%;
+  color: var(--primary);
+  background-color: var(--secondary);
+  font-family: var(--font);
 
-	display: grid;
-	grid-template-columns: 1fr;
-	place-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
 }
 
 /* Reset start */
@@ -91,271 +91,329 @@ h4,
 h5,
 h6,
 ul {
-	margin: 0;
+  margin: 0;
 }
 
 ul {
-	padding: 0;
-	list-style-type: none;
+  padding: 0;
+  list-style-type: none;
 }
 /* Reset end */
 
 /* Components start */
 .headline {
-	font-size: 2rem;
-	color: var(--primary);
-	display: block;
+  font-size: 2rem;
+  color: var(--primary);
+  display: block;
 }
+
+.headline--small {
+  font-size: 1.25rem;
+}
+
 .icon {
-	display: inline-block;
-	vertical-align: middle;
-	font-size: 1.5rem;
-	color: var(--primary);
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  color: var(--primary);
+  pointer-events: none;
 }
 
 [class*='button'] {
-	outline: 2px solid transparent;
-	border: none;
-	border-radius: 5px;
+  outline: 2px solid transparent;
+  border: none;
+  border-radius: 5px;
 
-	cursor: pointer;
-	display: inline-block;
-	background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  background-color: transparent;
 }
 
 [class*='button']:hover {
-	transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .icon-button {
-	padding: 0.5rem;
+  padding: 0.5rem;
 }
 
 .icon-button:hover {
-	background-color: var(--icon-button-bg);
+  background-color: var(--icon-button-bg);
 }
 
 .icon-button .icon {
-	transition: transform 0.3s, color 0.3s;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .icon-button:hover .icon {
-	transform: rotate3d(0, 0, 1, 45deg);
+  transform: rotate3d(0, 0, 1, 45deg);
 }
 
 .icon-button:active:hover .icon {
-	color: var(--tertiary);
+  color: var(--tertiary);
 }
 
 .button {
-	background-color: var(--primary);
-	color: var(--secondary);
-	font: inherit;
-	font-weight: 500;
-	padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: var(--secondary);
+  font: inherit;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
 }
 
 .button:hover {
-	background-color: var(--tertiary);
+  background-color: var(--tertiary);
 }
 
 .button:active:hover {
-	background-color: var(--tertiary-400);
+  background-color: var(--tertiary-400);
 }
 
 .button .icon {
-	color: var(--secondary);
-	margin-top: -0.1rem;
+  color: var(--secondary);
+  margin-top: -0.1rem;
 }
 
 .switch {
-	display: inline-block;
-	padding: 0.5rem;
-	cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 
 .switch__button {
-	outline: 2px solid transparent;
-	border: none;
-	border-radius: 50px;
-	padding: 0;
-	background-color: var(--secondary-500);
-	width: 40px;
-	height: 14px;
-	vertical-align: middle;
-	position: relative;
-	cursor: pointer;
+  outline: 2px solid transparent;
+  border: none;
+  border-radius: 50px;
+  padding: 0;
+  background-color: var(--secondary-500);
+  width: 40px;
+  height: 14px;
+  vertical-align: middle;
+  position: relative;
+  cursor: pointer;
 }
 
 .switch__button::before,
 .switch__button::after {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	border-radius: 50px;
-	transition: left 0.3s, color 0.3s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50px;
+  transition: left 0.3s, color 0.3s;
 }
 
 .switch__button::before {
-	content: '\e518';
-	left: 0;
-	z-index: 5;
-	font-family: var(--google-icon-font);
-	color: var(--primary);
-	line-height: 20px;
-	width: 20px;
-	height: 20px;
-	background-color: var(--day);
+  content: '\e518';
+  left: 0;
+  z-index: 5;
+  font-family: var(--google-icon-font);
+  color: var(--primary);
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--day);
 }
 
 .switch__button::after {
-	content: '';
-	width: 40px;
-	height: 40px;
-	left: -10px;
-	background-color: var(--secondary-transparent);
-	opacity: 0;
+  content: '';
+  width: 40px;
+  height: 40px;
+  left: -10px;
+  background-color: var(--secondary-transparent);
+  opacity: 0;
 }
 
 .switch.triggered .switch__button::before {
-	content: '\e51c';
-	left: 20px;
-	color: var(--primary);
-	background-color: var(--night);
+  content: '\e51c';
+  left: 20px;
+  color: var(--primary);
+  background-color: var(--night);
 }
 
 .switch.triggered .switch__button::after {
-	left: 10px;
+  left: 10px;
 }
 
 .switch:hover .switch__button::after {
-	transition: left 0.3s, opacity 0.3s;
-	opacity: 1;
+  transition: left 0.3s, opacity 0.3s;
+  opacity: 1;
 }
 
 .modal {
-	position: fixed;
-	top: 0;
-	left: 50%;
-	transform: translate(-50%, -100%);
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  z-index: 500;
 
-	width: 90%;
-	min-width: 200px;
-	max-width: 300px;
-	max-height: 100%;
+  width: 90%;
+  min-width: 200px;
+  max-width: 300px;
+  max-height: 100%;
 
-	overflow: auto;
-	padding: 1rem;
-	box-sizing: border-box;
+  overflow: auto;
+  padding: 1rem;
+  box-sizing: border-box;
 
-	border-radius: 0 0 10px 10px;
-	background-color: var(--modal-bg);
-	color: var(--secondary);
-	font-weight: 500;
-	transition: transform 0.3s;
+  border-radius: 0 0 10px 10px;
+  background-color: var(--modal-bg);
+  color: var(--secondary);
+  font-weight: 500;
+  transition: transform 0.3s;
 }
 
 .modal.visible {
-	transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 @media screen and (min-width: 900px) {
-	.modal {
-		width: auto;
-		top: 50%;
-		left: 1rem;
-		transform: translate3d(-110%, -50%, 0);
-		border-radius: 10px;
-	}
+  .modal {
+    width: auto;
+    top: 50%;
+    left: 1rem;
+    transform: translate3d(-110%, -50%, 0);
+    border-radius: 10px;
+  }
 
-	.modal.visible {
-		transform: translateY(-50%);
-	}
+  .modal.visible {
+    transform: translateY(-50%);
+  }
 
-	@supports (animation: test) {
-		.modal.hidden {
-			animation: bounce-and-move-to-left var(--modal-animation-duration) forwards;
-		}
+  @supports (animation: test) {
+    .modal.hidden {
+      animation: bounce-and-move-to-left var(--modal-animation-duration) forwards;
+    }
 
-		.modal.visible {
-			animation: move-to-right-and-bounce var(--modal-animation-duration) forwards;
-		}
+    .modal.visible {
+      animation: move-to-right-and-bounce var(--modal-animation-duration) forwards;
+    }
 
-		@keyframes move-to-right-and-bounce {
-			0% {
-				transform: translate3d(-110%, -50%, 0);
-			}
+    @keyframes move-to-right-and-bounce {
+      0% {
+        transform: translate3d(-110%, -50%, 0);
+      }
 
-			50% {
-				transform: translate3d(25px, -50%, 0);
-			}
+      50% {
+        transform: translate3d(25px, -50%, 0);
+      }
 
-			100% {
-				transform: translate3d(0, -50%, 0);
-			}
-		}
+      100% {
+        transform: translate3d(0, -50%, 0);
+      }
+    }
 
-		@keyframes bounce-and-move-to-left {
-			0% {
-				transform: translate3d(0, -50%, 0);
-			}
+    @keyframes bounce-and-move-to-left {
+      0% {
+        transform: translate3d(0, -50%, 0);
+      }
 
-			50% {
-				transform: translate3d(25px, -50%, 0);
-			}
+      50% {
+        transform: translate3d(25px, -50%, 0);
+      }
 
-			100% {
-				transform: translate3d(-110%, -50%, 0);
-			}
-		}
-	}
+      100% {
+        transform: translate3d(-110%, -50%, 0);
+      }
+    }
+  }
+}
+
+.modal__headline {
+  color: var(--secondary);
+}
+
+.modal__item-container:not(:last-of-type) {
+  margin-bottom: 1rem;
 }
 
 .modal__item {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.modal__item:not(:last-of-type) {
-	margin-bottom: 2rem;
+.modal__item--glued {
+  justify-content: flex-start;
+}
+
+.modal__item__text {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.modal__item__selector.modal__item__selector {
+  display: block;
+  margin: 0.25rem 1.5rem 0 0;
+}
+
+.time-selector {
+  width: 100%;
+  max-width: 50px;
+  display: inline-block;
+}
+
+.time-selector__button {
+  width: 100%;
+  display: block;
+  margin-inline: auto;
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.time-selector__button:hover {
+  background-color: var(--secondary-500);
+}
+
+.time-selector__field {
+  outline: 2px solid transparent;
+  border: none;
+  display: block;
+  width: 100%;
+  height: 25px;
+  padding: 0 0.5rem;
+  margin-block: 0.25rem;
+  box-sizing: border-box;
+  background-color: var(--primary-900);
+  border-radius: 5px;
+  font: inherit;
+  text-align: center;
 }
 /* Components end */
 
 /* Header start */
 .header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	column-gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2rem;
 }
 /* Header end */
 
 /* Main start */
 .main {
-	max-width: max-content;
-	margin-inline: auto;
+  max-width: max-content;
+  margin-inline: auto;
 }
 
 /* Time start */
 .time {
-	margin-block: 1rem;
-	padding: 1rem;
-	background-color: var(--primary);
-	border-radius: 10px;
+  margin-block: 1rem;
+  padding: 1rem;
+  background-color: var(--primary);
+  border-radius: 10px;
 }
 
 .time__text {
-	font-size: 4rem;
-	font-weight: 700;
-	display: block;
-	text-align: center;
-	color: var(--secondary);
+  font-size: 4rem;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  color: var(--secondary);
 }
 
 .start-counter-button {
-	display: block;
-	margin-inline: auto;
+  display: block;
+  margin-inline: auto;
 }
 /* Time end */
 /* Main end */
